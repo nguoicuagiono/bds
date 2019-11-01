@@ -1,0 +1,215 @@
+<%-- 
+    Document   : cart
+    Created on : Oct 2, 2019, 8:11:14 PM
+    Author     : ASUS
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <title>JSP Page</title>
+        <style>
+            td{
+                background-color: darksalmon;
+                border: 2px solid burlywood;
+                color: darkslategrey
+            }
+            input{
+                font-size: 19px;
+                background-color: #38373C;
+                color: white;
+                border: 0;
+            }
+            table th{
+                margin-top: 15px;
+                height: 50px;
+                border: 2px solid burlywood;
+                width: 200px;
+            }
+            input:hover{
+                background-color: #602D8D;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+	<div class="header">
+		<div class="header_top">
+			<div class="logo">
+				<a href="index.jsp"><img src="images/logo.png" alt="" /></a>
+			</div>
+			  <div class="header_top_right">
+			    <div class="search_box">
+				    <form>
+				    	<input type="text" value="Tên sản phẩm cần tìm" ><input type="submit" value="Tìm">
+				    </form>
+			    </div>
+			    <div class="shopping_cart">
+					<div class="cart">
+						<a href="cart.jsp" title="View my shopping cart" rel="nofollow">
+								<span class="cart_title">Giỏ hàng</span>
+							</a>
+						</div>
+			      </div>
+		   <div class="login">
+		   	   <span><a href="login.jsp"><img src="images/login.png" alt="" title="login"/></a></span>
+		   </div>
+		 <div class="clear"></div>
+	 </div>
+	 <div class="clear"></div>
+ </div>
+	<div class="h_menu">
+		<a id="touch-menu" class="mobile-menu" href="#">Menu</a>
+		<nav>
+		<ul class="menu list-unstyled">
+			<li><a href="index.jsp">Trang Chủ</a></li>
+			<li class="activate"><a href="products.jsp">Sản phẩm</a>
+				<ul class="sub-menu list-unstyled">
+				 <div class="nag-mother-list">
+				   <div class="navg-drop-main">
+					<div class="nav-drop"> 
+						<li><a href="preview.jsp">Điện Thoai</a></li>
+						<li><a href="preview-5.jsp">Tủ Lạnh</a></li>
+                                                <li><a href="preview-6.jsp">Máy Ảnh</a></li>
+					</div>
+					
+					<div class="clear"> </div>
+				</div>
+				</div>
+			</ul>
+			</li>
+			<li><a href="products.jsp">Hàng Đầu</a>			
+				<ul class="sub-menu list-unstyled sub-menu2">
+				  <div class="navg-drop-main">
+						<div class="nav-drop nav-top-brand"> 
+						<li><a href="preview.jsp">Điện Thoai</a></li>
+						<li><a href="preview-5.jsp">Tủ Lạnh</a></li>
+                                                <li><a href="preview-3.jsp">Tivi</a></li>   
+                                                <li><a href="preview-6.jsp">Máy Ảnh</a></li>
+                                                <li><a href="preview-2.jsp">Loa</a></li>
+						<li><a href="preview-4.jsp">Camera</a></li>
+						</div>								
+					</div>
+                                    <div class="clear"> </div>
+				</ul>
+			</li>		
+                        <li><a href="login.jsp">Tài Khoản</a>
+			</li>
+			<li><a href="about.jsp">Giới Thiệu</a></li>
+			<li><a href="contact.jsp">Hổ Trợ</a></li>
+			<div class="clear"> </div>
+		</ul>
+		</nav> 
+		<script src="js/menu.js" type="text/javascript"></script>
+		</div>
+        </div>
+        <center>
+            <br><b><h1 style="font-size: 29px; font-weight: bold;color: orangered">Thông tin các sản phẩm đã chọn</h1></b><br>
+            <table border="2" style="font-size: 25px; width: 1000px; background-color: antiquewhite;" align="center">
+            <th>STT</th>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Chọn</th>
+        </table><br>
+         <form action="" method="post">
+             <input type="submit" value="Xóa mặt hàng đã chọn" style="font-size: 25px;" name="action"><br>
+             <a href="products.jsp" style="font-size: 25px;" name="action">Nhiều hơn</a>
+         </form>
+    </center>
+            </div>
+        <div class="footer">
+   	  <div class="wrapper">	
+	     <div class="section group">
+				<div class="col_1_of_4 span_1_of_4">
+						<h4>Thông Tin</h4>
+						<ul>
+						<li><a href="#">Giới thiệu về Shop</a></li>
+						<li><a href="#">Dịch vụ khách hàng</a></li>
+						<li><a href="#"><span>tìm kiếm </span></a></li>
+						<li><a href="#">Đơn hàng và trả lại</a></li>
+						<li><a href="#"><span>Liên hệ </span></a></li>
+						</ul>
+					</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h4>Tại sao nên chọn chúng tôi</h4>
+						<ul>
+						<li><a href="about.jsp">Giới thiệu</a></li>
+						<li><a href="faq.jsp">Dịch vụ khách hàng</a></li>
+						<li><a href="#">Chính sách</a></li>
+						<li><a href="contact.jsp"><span>Địa chỉ</span></a></li>
+						</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h4>Tài Khoản</h4>
+						<ul>
+							<li><a href="contact.jsp">Đăng nhập</a></li>
+							<li><a href="index.jsp">Kiểm tra giỏ hàng</a></li>
+							<li><a href="#">Sản phẩm yêu thích</a></li>
+							<li><a href="#">Theo dõi đơn hàng</a></li>
+							<li><a href="faq.jsp">Hổ trợ</a></li>
+						</ul>
+				</div>
+				<div class="col_1_of_4 span_1_of_4">
+					<h4>Liên Hệ</h4>
+						<ul>
+							<li><span>+91-123-456789</span></li>
+							<li><span>+00-123-000000</span></li>
+						</ul>
+						<div class="social-icons">
+							<h4>Theo dõi</h4>
+					   		  <ul>
+							      <li class="facebook"><a href="#" target="_blank"> </a></li>
+							      <li class="twitter"><a href="#" target="_blank"> </a></li>
+							      <li class="googleplus"><a href="#" target="_blank"> </a></li>
+							      <li class="contact"><a href="#" target="_blank"> </a></li>
+							      <div class="clear"></div>
+						     </ul>
+   	 					</div>
+				</div>
+			</div>
+			<div class="copy_right">
+				<p>&copy; Cửa hàng uy tin. Đã được đăng ký Bản quyền </p>
+		   </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+	 		};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+    <link href="css/flexslider.css" rel='stylesheet' type='text/css' />
+							  <script defer src="js/jquery.flexslider.js"></script>
+							  <script type="text/javascript">
+								$(function(){
+								  SyntaxHighlighter.all();
+								});
+								$(window).load(function(){
+								  $('.flexslider').flexslider({
+									animation: "slide",
+									start: function(slider){
+									  $('body').removeClass('loading');
+									}
+								  });
+								});
+							  </script>
+    </body>
+</html>
